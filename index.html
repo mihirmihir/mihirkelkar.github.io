@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mihir Kelkar</title>
+  <meta name="description" content="Mihir Kelkar — strategy and operations consultant based in New York City, open to roles in account management, project management, and strategy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,800&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@1,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -24,9 +25,7 @@
       --amber: #B5860D;
     }
 
-    html {
-      font-size: 18px;
-    }
+    html { font-size: 18px; }
 
     body {
       background-color: var(--bg);
@@ -37,44 +36,71 @@
       min-height: 100vh;
     }
 
-    .container {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 52px 32px 48px;
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 48px 0;
     }
 
-    header {
-      margin-bottom: 32px;
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .photo-col {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .photo-wrap {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .content-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
 
     h1 {
       font-family: 'Urbanist', sans-serif;
       font-weight: 800;
       font-style: italic;
-      font-size: 3rem;
+      font-size: 2.8rem;
       letter-spacing: 0.01em;
       font-kerning: normal;
       font-feature-settings: "kern" 1;
       text-rendering: optimizeLegibility;
       line-height: 1;
       color: var(--text);
-    }
-
-    .bio {
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
     .bio p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text);
       margin-bottom: 1.2em;
     }
 
     .bio p:last-child {
       margin-bottom: 0;
-      font-style: normal;
       font-weight: 600;
-      color: var(--text);
     }
 
     .divider {
@@ -87,12 +113,12 @@
     nav {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     nav a {
       font-family: 'Source Serif 4', serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 400;
       text-decoration: none;
       letter-spacing: 0.01em;
@@ -105,7 +131,7 @@
 
     nav a::after {
       content: '→';
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       opacity: 0;
       transform: translateX(-4px);
       transition: opacity 0.2s ease, transform 0.2s ease;
@@ -116,9 +142,7 @@
       transform: translateX(0);
     }
 
-    nav a:hover {
-      opacity: 0.75;
-    }
+    nav a:hover { opacity: 0.7; }
 
     .link-contact  { color: var(--red); }
     .link-linkedin { color: var(--blue); }
@@ -126,53 +150,77 @@
     .link-writing  { color: var(--amber); }
 
     footer {
-      margin-top: 48px;
-      font-size: 0.72rem;
+      margin-top: 40px;
+      font-size: 0.68rem;
       color: var(--muted);
-      font-family: 'Source Serif 4', serif;
-      font-weight: 300;
     }
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 56px 24px 56px;
+    /* Mobile */
+    @media (max-width: 700px) {
+      .page {
+        align-items: flex-start;
+        padding: 48px 0 64px;
       }
+
+      .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 28px;
+      }
+
+      .photo-col {
+        justify-content: flex-start;
+      }
+
+      .photo-wrap {
+        max-width: 180px;
+      }
+
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+        margin-bottom: 24px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="page">
+    <div class="container">
 
-    <header>
-      <h1>Mihir Kelkar</h1>
-    </header>
+      <div class="photo-col">
+        <div class="photo-wrap">
+          <img src="mihir.png" alt="Mihir Kelkar" />
+        </div>
+      </div>
 
-    <div class="bio">
-      <p>I'm a strategy and operations consultant based in New York City. Over the past decade I've worked across startup, retail, and consulting environments where things move quickly and clarity matters. My work sits at the intersection of consumer insight, operational execution, and the people who make it all possible.</p>
+      <div class="content-col">
+        <h1>Mihir Kelkar</h1>
 
-      <p>I'm currently looking for roles where managing people, projects, and relationships is the work — particularly in agency and strategy environments.</p>
+        <div class="bio">
+          <p>I'm a strategy and operations consultant based in New York City. Over the past decade I've worked across startup, retail, and consulting environments where things move quickly and clarity matters. My work sits at the intersection of consumer insight, operational execution, and the people who make it all possible.</p>
 
-      <p>I write and host a quiz night, follow European football with perhaps too much investment, and like doing the New York Times crossword in pen.</p>
+          <p>I'm currently looking for roles where managing people, projects, and relationships is the work — particularly in agency and strategy environments.</p>
 
-      <p>When something needs to get done, I'm already thinking about how.</p>
+          <p>I write and host a quiz night, follow European football with perhaps too much investment, and like doing the New York Times crossword in pen.</p>
+
+          <p>When something needs to get done, I'm already thinking about how.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <nav>
+          <a href="mailto:mihirkelkar@gmail.com" class="link-contact">Contact</a>
+          <a href="https://www.linkedin.com/in/kelkarmihir" target="_blank" rel="noopener" class="link-linkedin">LinkedIn</a>
+          <a href="/resume.pdf" target="_blank" class="link-resume">Résumé</a>
+          <a href="#" class="link-writing">Writing</a>
+        </nav>
+
+        <footer>
+          <p>© Mihir Kelkar 2026</p>
+        </footer>
+      </div>
+
     </div>
-
-    <div class="divider"></div>
-
-    <nav>
-      <a href="mailto:mihirkelkar@gmail.com" class="link-contact">Contact</a>
-      <a href="https://www.linkedin.com/in/kelkarmihir" target="_blank" rel="noopener" class="link-linkedin">LinkedIn</a>
-      <a href="/resume.pdf" target="_blank" class="link-resume">Résumé</a>
-      <a href="#" class="link-writing">Writing</a>
-    </nav>
-
-    <footer>
-      <p>© Mihir Kelkar 2026</p>
-    </footer>
-
   </div>
 </body>
 </html>
