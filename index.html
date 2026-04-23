@@ -156,7 +156,7 @@
       color: var(--muted);
     }
 
-    /* Mobile */
+ /* Mobile */
     @media (max-width: 700px) {
       .page {
         align-items: flex-start;
@@ -171,6 +171,7 @@
 
       .photo-col {
         justify-content: flex-start;
+        padding-top: 0;
       }
 
       .photo-wrap {
@@ -188,11 +189,17 @@
   <div class="page">
     <div class="container">
 
-      <div class="photo-col">
-        <div class="photo-wrap">
-          <img src="mihir.png" alt="Mihir Kelkar" />
-        </div>
-      </div>
+<div class="photo-col">
+  <div class="photo-wrap">
+    <img src="mihir.png" alt="Mihir Kelkar" />
+    <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px;">
+      <span class="link-contact" style="font-family: 'Source Serif 4', serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.01em;">mihirkelkar@gmail.com</span>
+      <a href="https://www.linkedin.com/in/kelkarmihir" target="_blank" rel="noopener" class="link-linkedin" style="font-family: 'Source Serif 4', serif; font-size: 0.9rem; font-weight: 400; text-decoration: none; letter-spacing: 0.01em;">LinkedIn</a>
+      <a href="/resume.pdf" target="_blank" class="link-resume" style="font-family: 'Source Serif 4', serif; font-size: 0.9rem; font-weight: 400; text-decoration: none; letter-spacing: 0.01em;">Résumé</a>
+      <a href="#" class="link-writing" style="font-family: 'Source Serif 4', serif; font-size: 0.9rem; font-weight: 400; text-decoration: none; letter-spacing: 0.01em;">Writing</a>
+    </div>
+  </div>
+</div>
 
       <div class="content-col">
         <h1>Mihir Kelkar</h1>
@@ -206,15 +213,6 @@
 
           <p>When something needs to get done, I'm already thinking about how.</p>
         </div>
-
-        <div class="divider"></div>
-
-        <nav>
-          <a href="mailto:mihirkelkar@gmail.com" class="link-contact">Contact</a>
-          <a href="https://www.linkedin.com/in/kelkarmihir" target="_blank" rel="noopener" class="link-linkedin">LinkedIn</a>
-          <a href="/resume.pdf" target="_blank" class="link-resume">Résumé</a>
-          <a href="#" class="link-writing">Writing</a>
-        </nav>
 
         <footer>
           <p>© Mihir Kelkar 2026</p>
